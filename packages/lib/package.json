@@ -1,0 +1,11 @@
+{
+  "name": "@lerna/lib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --production"
+  },
+  "author": "",
+  "license": "ISC"
+}
