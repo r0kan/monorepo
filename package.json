@@ -1,16 +1,31 @@
 {
-  "name": "@lerna/common",
+  "name": "@app/common",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "boot": "lerna bootstrap --ci",
+    "clean": "lerna clean --yes",
+    "build": "rm -rf dist && lerna run build --scope @app/lib && lerna run build --scope @app/main",
+    "start": "lerna run start --parallel"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/r0kan/monorepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/r0kan/monorepo/issues"
+  },
+  "author": "r0kan",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
     "lerna": "^3.13.0",
     "webpack": "^4.29.5",
-    "webpack-cli": "^3.2.3"
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.0"
   }
 }

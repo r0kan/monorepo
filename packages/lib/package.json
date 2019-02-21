@@ -1,11 +1,19 @@
 {
-  "name": "@lerna/lib",
+  "name": "@app/lib",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "application library",
+  "main": "dist/lib.js",
   "scripts": {
-    "build": "webpack --production"
+    "build": "rm -rf dist && webpack --mode=production",
+    "start": "webpack --mode=development --w"
   },
-  "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "react": "^16.8.2",
+    "lodash": "^4.17.11"
+  },
+  "peerDependencies": {
+    "react": "^16.8.2",
+    "lodash": "^4.17.11"
+  }
 }
